@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        var url = 'http://item.taobao.com/item.html?a=1&b=2&c=&b=xxx&e=&f=sss&g'
+        function getParams(str) {
+            str.split('?')[1].split('&').map(function (item) {
+                var obj = {};
+                obj[item.split('=')[0]] = item.split('=')[1]
+                return obj
+            })
+            
+        }
+        getParams(url)
+        var val1 = 0,
+            val2 = 0,
+            val3 = 0;
+            for(var i = 0; i < 3; i++){
+                var i2 = i;
+                console.log('i2' + i2);
+                (function () {
+                    var i3 = i;
+                    console.log('i3' + i3);
+                    setTimeout(function(){
+                        console.log('set' + i)
+                        console.log('set' + i2)
+                        console.log('set' + i3)
+                        val1 += i;
+                        val2 += i2;
+                        val3 += i3;
+                    }, 1);
+                })()
+            }
+        setTimeout(function(){
+            console.log(val1)
+            console.log(val2)
+            console.log(val3)
+        }, 100);
+
+    </script>
+
+    <div class="banner">
+        <img src="" alt="">
+    </div>
+    <style>
+        .banner img{
+            width: 100%;
+            display: block;
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <audio src="http://yinyueshiting.baidu.com/data2/music/7a243e2a3d28e21733abc2d10cbd737d/566878717/566878717.mp3?xcode=e1720d8e116a001760e85653b43f0cf4" controls></audio>
+        
+    </audio>
+
+    <script>
+        function demo(a) {
+            console.log(a)
+        }
+        function callback(res) {
+            //alert(result);    
+            console.log(res)
+        }
+        var JSONP = document.createElement("script");
+        JSONP.type = "text/javascript";
+        JSONP.src = "http://tingapi.ting.baidu.com/v1/restserver/ting?format=json&callback=callback&from=webapp_music&method=baidu.ting.song.play&songid=566878465";
+        document.getElementsByTagName("head")[0].appendChild(JSONP);
+
+    </script>
+    <script src="http://692060.ichengyun.net/api/jsonp/query.php?callback=demo"></script>
+    <script>
+        // function demo(a) {
+        //     console.log(a)
+        // }
+        // function callback(res) {
+        //     //alert(result);    
+        //     console.log(res)
+        // }
+        // var JSONP = document.createElement("script");
+        // JSONP.type = "text/javascript";
+        // JSONP.src = "http://tingapi.ting.baidu.com/v1/restserver/ting?format=json&callback=callback&from=webapp_music&method=baidu.ting.song.play&songid=566878465";
+        // document.getElementsByTagName("head")[0].appendChild(JSONP);
+
+    </script>
+
+</body>
+</html>

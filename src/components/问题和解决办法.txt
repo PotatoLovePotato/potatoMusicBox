@@ -1,0 +1,24 @@
+
+跨域请求问题
+
+    使用 vue-resource 基于ES6的promise 处理数据时和 fetch 类似
+    用法：
+        引入 挂载
+        import VueResoure from 'vue-resource'
+        Vue.use(VueResoure)
+
+        发送请求：常用的方法
+            this.$http.get( url, [options]).then() 
+            this.$http.post( url, [options]).then() 
+            this.$http.jsonp( url, [options]).then() 
+        
+        报错：Uncaught (in promise)
+            解决办法:
+                原因：请求地址中带有callback 而 jsonp请求时也会自己加上 callback 
+                办法：删除地址中的callback
+        
+css3 动画卡顿 ：
+    原因：运动方式
+    解决： 
+        运动方式改为 linear
+

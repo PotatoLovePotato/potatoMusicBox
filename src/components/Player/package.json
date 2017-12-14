@@ -1,0 +1,4 @@
+{
+    "name": "Player",
+    "main": "./Player.vue"
+}
